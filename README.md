@@ -125,7 +125,7 @@ Environment Variables
 Create a .env file in the project root:
 
 # Domain configuration
-DOMAIN=giggle.ng
+DOMAIN=instaworks.ng
 CLOUDFLARE_API_EMAIL=your-email@example.com
 CLOUDFLARE_API_KEY=your-api-key
 
@@ -148,7 +148,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: service.giggle.ng
+    - host: service.instaworks.ng
       http:
         paths:
           - path: /
@@ -160,7 +160,7 @@ spec:
                   number: 80
   tls:
     - hosts:
-        - service.giggle.ng
+        - service.instaworks.ng
       secretName: service-tls
 Storage Configuration
 Using Longhorn for persistent volumes:
@@ -208,11 +208,11 @@ flux create kustomization apps \
   --interval=5m
 📊 Monitoring
 Access Dashboards
-Grafana: https://grafana.giggle.ng (admin/dugneonadmin)
+Grafana: https://grafana.instaworks.ng (admin/dugneonadmin)
 
-Traefik: https://traefik.giggle.ng
+Traefik: https://traefik.instaworks.ng
 
-Longhorn: https://longhorn.giggle.ng
+Longhorn: https://longhorn.instaworks.ng
 
 Kubernetes Dashboard:
 
